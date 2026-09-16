@@ -18,7 +18,7 @@ services:
     working_dir: /app
     volumes:
       - .:/app
-    command: sh -c "test -d dist/node_modules || tar xzf dist.tar.gz && cp ormconfig.js dist/ && cd dist && mkdir -p dist/public && cp /app/public/index.html dist/public/index.html && n=0; until node node_modules/typeorm/cli.js migration:run; do n=$$((n+1)); if [ $$n -ge 10 ]; then exit 1; fi; echo 'Waiting for MySQL, retrying in 3s...'; sleep 3; done && node server.js"
+    command: sh -c "test -d dist/node_modules || tar xzf dist.tar.gz && cp ormconfig.js dist/ && cd dist && mkdir -p dist/public && cp /app/public/index.html dist/public/index.html && until bash -c 'echo > /dev/tcp/db/3306' 2>/dev/null; do echo 'Waiting for MySQL to accept connections...'; sleep 2; done && node node_modules/typeorm/cli.js migration:run && node server.js"
     restart: on-failure:5
     ports:
       - "3000:5002"
