@@ -42,6 +42,12 @@ export function router() {
 }
 
 export function initRouter() {
+  // If navigated to a path like /lojista, convert to hash route
+  const path = window.location.pathname;
+  if (path && path !== '/' && !path.startsWith('/js/') && !path.startsWith('/css/') && !path.startsWith('/files')) {
+    window.history.replaceState(null, '', '/');
+    window.location.hash = path;
+  }
   window.addEventListener('hashchange', router);
   router();
 }
