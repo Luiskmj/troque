@@ -1,0 +1,198 @@
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: var(--tr-primary);
+  --primary-light: var(--tr-primary-light);
+  --primary-dark: var(--tr-primary-dark);
+  --on-primary: var(--tr-on-primary);
+  --gradient: linear-gradient(
+    245.18deg,
+    rgb(var(--primary-dark)) 0%,
+    rgb(var(--primary-light)) 100%
+  );
+
+  --tr-primary: 26, 111, 205;
+  --tr-primary-light: 55, 142, 212;
+  --tr-primary-dark: 30, 48, 69;
+  --tr-on-primary: 255, 255, 255;
+  --tr-gradient: linear-gradient(
+    245.18deg,
+    rgb(var(--tr-primary-dark)) 0%,
+    rgb(var(--tr-primary-light)) 100%
+  );
+
+  --tw-warning: 187, 77, 0;
+  --tw-error: 183, 28, 28;
+  --tw-info: 13, 71, 161;
+  --tw-success: 27, 94, 32;
+}
+
+* {
+  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-transform: translateX(var(--tw-translate-x))
+    translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
+    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+    scaleY(var(--tw-scale-y));
+}
+
+.is-alert-open {
+  overflow-y: hidden;
+}
+
+.react-select__control {
+  @apply _min-h-48 _h-auto _box-border _bg-transparent _border-none _typography-body-lg !important;
+}
+
+.react-select__control--is-focused {
+  @apply _shadow-none _border-none !important;
+}
+
+.react-select__control--is-disabled .react-select__placeholder,
+.react-select__control--is-disabled .react-select__single-value,
+.react-select__control--is-disabled .react-select__indicator,
+.react-select__control--is-disabled .react-select__multi-value__label {
+  @apply _text-black _text-opacity-tertiary !important;
+}
+
+.react-select__control--is-disabled .react-select__multi-value {
+  @apply _bg-black _bg-opacity-overlay-disabled !important;
+}
+
+.react-select__menu-portal {
+  @apply _text-black _text-opacity-primary _typography-body-lg _z-select !important;
+}
+
+.react-select__menu {
+  @apply _rounded _my-0 _overflow-hidden !important;
+}
+
+.react-select__menu-list {
+  @apply _py-0 !important;
+}
+
+.react-select__option--is-focused {
+  @apply _bg-black _bg-opacity-hovered !important;
+}
+
+.react-select__option--is-selected {
+  @apply _text-black _bg-primary _bg-opacity-selected !important;
+}
+
+.react-select__value-container {
+  @apply _py-8 _pl-12 _pr-0 !important;
+}
+
+.react-select__multi-value {
+  @apply _bg-black _bg-opacity-overlay _rounded-full _px-8 !important;
+}
+
+.react-select__multi-value__label {
+  @apply _p-4 _typography-body-md !important;
+}
+
+.react-select__single-value,
+.react-select__multi-value__label {
+  @apply _text-black _text-opacity-primary !important;
+}
+
+.react-select__multi-value__remove {
+  @apply _w-24 _p-0 _items-center _justify-center _cursor-pointer;
+}
+
+.react-select__placeholder,
+.react-select__indicator {
+  @apply _text-black _text-opacity-secondary !important;
+}
+
+.react-select__indicator {
+  @apply _rounded-full _p-0 _w-40 _h-40 _flex _items-center _justify-center _transition-colors hover:_bg-black hover:_bg-opacity-hovered active:_bg-black active:_bg-opacity-pressed !important;
+}
+
+.react-select__indicators {
+  @apply _px-4;
+}
+
+.react-select__indicator-separator {
+  @apply _hidden;
+}
+
+.recharts-surface {
+  @apply _overflow-visible;
+}
+
+.app-table-responsive th,
+.app-table-responsive td::before {
+  @apply _typography-title-md _text-black;
+}
+
+.app-table-responsive td {
+  @apply _typography-body-lg _text-black _text-opacity-secondary;
+}
+
+.nav-item {
+  @apply _px-12 !important;
+}
+
+.nav-link {
+  @apply _typography-label-lg _text-black _text-opacity-secondary _p-12 _rounded-lg hover:_bg-black hover:_bg-opacity-hovered !important;
+}
+
+.nav-link::before {
+  @apply _hidden !important;
+}
+
+.nav-link.active {
+  @apply _text-primary _bg-primary _bg-opacity-activated !important;
+}
+
+#sidenav-main .nav-link i {
+  font-size: 18px !important;
+  @apply _min-w-0 _w-24 _h-24 _flex _items-center _justify-center _mr-12 !important;
+}
+
+.navbar-vertical .navbar-collapse:before {
+  @apply md:_m-0 md:_mb-32 !important;
+}
+
+.modal-content {
+  @apply _rounded-lg;
+}
+
+.table th {
+  @apply _typography-title-md _text-black _normal-case !important;
+}
+
+.table td {
+  @apply _typography-body-lg _text-black _text-opacity-secondary !important;
+}
+
+.recharts-default-tooltip {
+  @apply _px-12 _py-8 _rounded !important;
+}
+
+.recharts-tooltip-label {
+  @apply _typography-label-lg _text-black !important;
+}
+
+.recharts-tooltip-item-list {
+  @apply _mt-4 !important;
+}
+
+.recharts-tooltip-item {
+  @apply _typography-body-md _py-0 !important;
+}
