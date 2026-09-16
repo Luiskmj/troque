@@ -1,6 +1,6 @@
 services:
   db:
-    image: mysql:8
+    image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: troque_rapido
@@ -18,7 +18,8 @@ services:
     working_dir: /app
     volumes:
       - .:/app
-    command: sh -c "test -d dist/node_modules || tar xzf dist.tar.gz && cp ormconfig.js dist/ && cd dist && node server.js"
+    command: sh -c "test -d dist/node_modules || tar xzf dist.tar.gz && cp ormconfig.js dist/ && cd dist && mkdir -p dist/public && cp /app/public/index.html dist/public/index.html && node node_modules/typeorm/cli.js migration:run && node server.js"
+    restart: on-failure:5
     ports:
       - "3000:5002"
     environment:

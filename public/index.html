@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Troque Rápido — API</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 48px;
+      max-width: 520px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .status-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: #4ade80;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 12px; color: #fff; }
+    .subtitle { color: #94a3b8; margin-bottom: 24px; }
+    .endpoint {
+      background: #0f3460;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .method { color: #4ade80; font-weight: bold; }
+    .path { color: #93c5fd; }
+    .note { margin-top: 24px; font-size: 0.85rem; color: #64748b; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1><span class="status-dot"></span>Troque Rápido API</h1>
+    <p class="subtitle">Backend is running successfully</p>
+    <div class="endpoint">
+      <span class="method">GET</span>
+      <span class="path">/ping</span>
+    </div>
+    <div class="endpoint">
+      <span class="method">POST</span>
+      <span class="path">/session</span>
+    </div>
+    <div class="endpoint">
+      <span class="method">GET</span>
+      <span class="path">/address</span>
+    </div>
+    <p class="note">
+      This is the compiled Express + TypeORM + MySQL backend.<br>
+      Frontend source files are present but their directory structure was lost during upload.
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/ping",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "APP_ID",
+      "description": "Nuvemshop app ID — from the Nuvemshop developer panel",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": false
+    },
+    {
+      "name": "APP_SECRET",
+      "description": "Nuvemshop app secret — from the Nuvemshop developer panel",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": false
+    },
+    {
+      "name": "SMPT_USER",
+      "description": "SMTP email user — from your email provider",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": false
+    },
+    {
+      "name": "SMPT_PASSWORD",
+      "description": "SMTP email password — from your email provider",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": false
+    },
+    {
+      "name": "VINDI_USERNAME",
+      "description": "Vindi payment API username — from the Vindi dashboard",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": false
+    },
+    {
+      "name": "VINDI_PASSWORD",
+      "description": "Vindi payment API password — from the Vindi dashboard",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": false
+    }
+  ]
+}

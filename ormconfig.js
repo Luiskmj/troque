@@ -9,7 +9,6 @@ module.exports = {
   database: process.env.DATABASE_NAME,
   entities: [process.env.TYPEORM_ENTITIES],
   migrations: [process.env.TYPEORM_MIGRATION],
-  synchronize: true,
   namingStrategy: new SnakeNamingStrategy(),
   cli: {
     migrationsDir: process.env.TYPEORM_MIGRATION_DIR,
