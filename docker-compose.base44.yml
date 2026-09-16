@@ -1,0 +1,45 @@
+services:
+  db:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: troque_rapido
+      MYSQL_ROOT_PASSWORD: docker
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks:
+      - troque-rapido
+
+  api:
+    image: node:18.17.0
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: sh -c "test -d dist/node_modules || tar xzf dist.tar.gz && cp ormconfig.js dist/ && cd dist && node server.js"
+    ports:
+      - "3000:5002"
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_PORT=3306
+      - DATABASE_USER=root
+      - DATABASE_PASS=docker
+      - DATABASE_NAME=troque_rapido
+      - TYPEORM_ENTITIES=./modules/**/infra/typeorm/entities/*.js
+      - TYPEORM_MIGRATION=./shared/infra/typeorm/migrations/*.js
+      - TYPEORM_MIGRATION_DIR=./shared/infra/typeorm/migrations
+      - NODE_ENV=production
+    env_file:
+      - ./.env.base44-defaults
+      - /run/base44/app.env
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - troque-rapido
+
+networks:
+  troque-rapido:
+    driver: bridge
