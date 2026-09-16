@@ -1,4 +1,8 @@
-/build
-/node_modules
-/build
-yarn-error.log
+node_modules
+dist
+.env
+yarn.lock
+package-lock.json
+database
+tmp/uploads/*
+!tmp/uploads/.gitkeep

@@ -1,0 +1,487 @@
+[
+  {
+    "usuario": "empresacws",
+    "senha": "12345",
+    "codAdministrativo": "17000190",
+    "contrato": "9992157880",
+    "codigo_servico": "04170",
+    "cartao": "0067599079",
+      "destinatario": {
+      "nome": "Fulano",
+      "logradouro": "SBN",
+      "numero": 10,
+      "complemento": "Bloco A",
+      "bairro": "Plano Piloto",
+      "referencia": "",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "cep": 70002900,
+      "ddd": 61,
+      "telefone": 34261111,
+      "email": "fulano@mail.com",
+      "ciencia_conteudo_proibido": "N"
+    },
+    "coletas_solicitadas": {
+      "tipo": "A",
+      "id_cliente": 1133566,
+      "valor_declarado": 1500,
+      "descricao": "",
+      "cklist": "",
+      "documento": "",
+      "remetente": {
+        "nome": "Ciclano",
+        "logradouro": "Rua 35",
+        "numero": 10,
+        "complemento": "",
+        "bairro": "Águas Claras(Sul)",
+        "referencia": "",
+        "cidade": "Brasília",
+        "uf": "DF",
+        "cep": 71931180,
+        "ddd": 61,
+        "telefone": 34262222,
+        "email": "ciclano@mail.com",
+        "identificacao": "",
+        "ddd_celular": 61,
+        "celular": 92236666,
+        "sms": "S",
+        "restricao_anac": "S"
+      },
+      "produto": {
+        "codigo": 116600063,
+        "tipo": 0,
+        "qtd": 1
+      },
+      "numero": "",
+      "ag": "",
+      "cartao": "",
+      "servico_adicional": "",
+      "ar": "",
+      "obj_col": {
+        "item": 1,
+        "desc": "",
+        "entrega": "",
+        "num": "",
+        "id": 553366
+      }
+    }
+  },
+
+  {
+    "usuario": "60618043",
+    "senha": "8o8otn",
+    "codAdministrativo": "08082650",
+    "contrato": "9912208555",
+    "codigo_servico": "04936",
+    "cartao": "0057018901",
+    "destinatario": {
+      "nome": "Fulano",
+      "logradouro": "Qd 301",
+      "numero": "10",
+      "complemento": "Residencial Central",
+      "bairro": "Centro",
+      "referencia": "Ao Lado",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "cep": "70002900",
+      "ddd": "61",
+      "telefone": "6133331234",
+      "email": "cli@email.com.br"
+    },
+    "coletas_solicitadas": {
+      "numero":  "",
+      "ag": "5",
+      "cartao": "0067599079",
+      "servico_adicional": "10",
+      "ar": "1",
+      "tipo": "A",
+      "cklist": "2",
+      "valor_declarado": "1000.00",
+      "descricao": "long",
+      "id_cliente": "102030",
+      "obj_col": {
+        "item": "1",
+        "desc": "string",
+        "entrega": "string",
+        "num": "string",
+        "id": "12344321"
+      },
+      "produto": {
+        "codigo": "116600403",
+        "qtd": 1,
+        "tipo": "0"
+      },
+      "remetente": {
+        "bairro": "Centro",
+        "cep": "80002900",
+        "cidade": "Curitiba",
+        "complemento": "Bloco II",
+        "ddd": "41",
+        "email": "cli@email.com.br",
+        "logradouro": "Rua João Negrão",
+        "nome": "Ciclano",
+        "numero": "1251",
+        "referencia": "referencia",
+        "telefone": "4132321234",
+        "uf": "PR",
+        "celular": "celular",
+        "ddd_celular": "dd",
+        "sms": "N",
+        "identificacao": "ident"
+      }
+    }
+  },
+
+  {
+    "codAdministrativo": 17000190,
+    "codigo_servico": 4677,
+    "cartao": 67599079,
+    "destinatario": {
+      "nome": "Fulano",
+      "logradouro": "SBN",
+      "numero": "10",
+      "complemento": "Bloco A",
+      "bairro": "Plano Piloto",
+      "referencia": "",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "cep": "70002900",
+      "ddd": "61",
+      "telefone": "34261111",
+      "email": "fulano@mail.com",
+      "ciencia_conteudo_proibido": "N"
+    },
+    "coletas_solicitadas": {
+      "tipo": "A",
+			"numero": "",
+      "id_cliente": "1133566",
+		  "ag": "",
+			"cartao": "",
+      "valor_declarado": 1500,
+			"servico_adicional": "",
+      "descricao": "",
+			"ar": "",
+      "cklist": "",
+      "documento": "",
+      "remetente": {
+        "nome": "Ciclano",
+        "logradouro": "Rua 35",
+        "numero": "10",
+        "complemento": "",
+        "bairro": "Águas Claras(Sul)",
+        "referencia": "",
+        "cidade": "Brasília",
+        "uf": "DF",
+        "cep": "71931180",
+        "ddd": "61",
+        "telefone": "34262222",
+				"ddd_celular": "61",
+        "celular": "92236666",
+        "email": "ciclano@mail.com",
+				"sms": "S",
+        "identificacao": "",
+        "restricao_anac": "S"
+      },
+      "produto": {
+        "codigo": 116600063,
+        "tipo": 0,
+        "qtd": 1
+      },
+      "obj_col": {
+        "item": 1,
+				"id":"553366",
+        "desc": "",
+        "entrega": "",
+        "num": ""
+      }
+    }
+  },
+
+  {
+    "codAdministrativo": 17000190,
+    "codigo_servico": 4677,
+    "cartao": 67599079,
+    "destinatario": {
+      "nome": "Joao da Silva",
+      "logradouro": "SBN",
+      "numero": "10",
+      "complemento": "",
+      "bairro": "",
+      "referencia": "",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "cep": "70002900",
+      "ddd": "",
+      "telefone": "",
+      "email": "",
+      "ciencia_conteudo_proibido": "N"
+    },
+    "coletas_solicitadas": {
+      "tipo": "A",
+			"numero": "",
+      "id_cliente": "",
+		  "ag": "",
+			"cartao": "",
+      "valor_declarado": "",
+			"servico_adicional": "",
+      "descricao": "",
+			"ar": "",
+      "cklist": "",
+      "documento": "",
+      "remetente": {
+        "nome": "Ciclano",
+        "logradouro": "Rua 35",
+        "numero": "10",
+        "complemento": "",
+        "bairro": "",
+        "referencia": "",
+        "cidade": "Brasília",
+        "uf": "DF",
+        "cep": "71931180",
+        "ddd": "61",
+        "telefone": "34262222",
+				"ddd_celular": "",
+        "celular": "",
+        "email": "ciclano@mail.com",
+				"sms": "",
+        "identificacao": "",
+        "restricao_anac": "S"
+      },
+      "produto": {
+        "codigo": 116600063,
+        "tipo": 0,
+        "qtd": 1
+      },
+      "obj_col": {
+        "item": 1,
+				"id":"",
+        "desc": "",
+        "entrega": "",
+        "num": ""
+      }
+    }
+  },
+
+  {
+    "status_processamento": "01",
+    "data_processamento": "08/07/2021",
+    "hora_processamento": "11:11",
+    "cod_erro": "00",
+    "msg_erro": "",
+    "resultado_solicitacao": [
+      {
+        "tipo": "A",
+        "id_cliente": "",
+        "numero_coleta": "108499032",
+        "numero_etiqueta": "",
+        "id_obj": "",
+        "status_objeto": "01",
+        "prazo": "18/07/2021",
+        "data_solicitacao": "08/07/2021",
+        "hora_solicitacao": "11:11",
+        "codigo_erro": "0",
+        "descricao_erro": ""
+      }
+    ]
+  },
+
+    {
+      "codAdministrativo": "17000190",
+      "codigo_servico": "4677",
+      "cartao": "67599079",
+      "destinatario": {
+        "nome": "Fulano",
+        "logradouro": "SBN",
+        "numero": 10,
+        "complemento": "Bloco A",
+        "bairro": "Plano Piloto",
+        "referencia": "",
+        "cidade": "Brasília",
+        "uf": "DF",
+        "cep": 70002900,
+        "ddd": 61,
+        "telefone": 34261111,
+        "email": "fulano@mail.com",
+        "ciencia_conteudo_proibido": "N"
+      },
+      "coletas_solicitadas": {
+        "tipo": "A",
+        "id_cliente": 1133566,
+        "valor_declarado": 1500,
+        "descricao": "",
+        "cklist": "",
+        "documento": "",
+        "remetente": {
+          "nome": "Ciclano",
+          "logradouro": "Rua 35",
+          "numero": 10,
+          "complemento": "",
+          "bairro": "Águas Claras(Sul)",
+          "referencia": "",
+          "cidade": "Brasília",
+          "uf": "DF",
+          "cep": 71931180,
+          "ddd": 61,
+          "telefone": 34262222,
+          "email": "ciclano@mail.com",
+          "identificacao": "",
+          "ddd_celular": 61,
+          "celular": 92236666,
+          "sms": "S",
+          "restricao_anac": "S"
+        },
+        "produto": {
+          "codigo": 116600063,
+          "tipo": 0,
+          "qtd": 1
+        },
+        "numero": "",
+        "ag": "",
+        "cartao": "",
+        "servico_adicional": "",
+        "ar": "",
+        "obj_col": {
+          "item": 1,
+          "desc": "",
+          "entrega": "",
+          "num": "",
+          "id": 553366
+        }
+      }
+    },
+
+    {
+      "id": 23,
+      "logistic": {
+          "codAdministrativo": 17000190,
+         "codigo_servico": 4677,
+         "cartao": 67599079,
+         "destinatario": {
+           "nome": "demo-agencia-eva-commerce",
+           "logradouro": "Rua Leandro Tavares da Silva",
+           "numero": 123,
+           "complemento": "Casa",
+           "bairro": "Jardim Luiza",
+           "cidade": "Franca",
+           "uf": "SP",
+           "cep": "14407-526",
+           "referencia": "",
+           "ddd": "",
+           "telefone": "",
+           "email": "",
+           "ciencia_conteudo_proibido": "N"
+         },
+         "coletas_solicitadas": {
+            "tipo": "A",
+            "numero": "",
+            "ag": "",
+            "cartao": "",
+            "servico_adicional": "" ,
+            "ar": "",
+            "cklist": "",
+            "documento": "",
+            "valor_declarado": "",
+            "descricao": "",
+            "id_cliente": "",
+            "obj_col": {
+              "item": "3",
+              "desc": "",
+              "entrega": "",
+              "num": "",
+              "id": ""
+            },
+            "produto": {
+              "codigo": "",
+              "qtd": "",
+              "tipo": ""
+            },
+            "remetente": {
+              "bairro": "Jardim Luiza",
+              "cep": "14407526",
+              "cidade": "Franca",
+              "complemento": "Casa",
+              "logradouro": "Rua Leandro Tavares da Silva",
+              "numero": "1234",
+              "uf": "SP",
+              "referencia": "",
+              "ddd": "16",
+              "telefone": "997859710",
+              "ddd_celular": "",
+              "celular": "",
+              "nome": "Malu Marlene Vieira",
+              "email": "testemalueva@gmail.com",
+              "identificacao": "35085721888",
+              "sms": "N",
+              "restricao_anac": "S"
+            }
+          }
+        }
+    },
+
+    {
+      "solicitarPostagemReversa": {
+        "codAdministrativo": 17000190,
+        "codigo_servico": 4677,
+        "cartao": 67599079,
+        "destinatario": {
+          "nome": "Fulano",
+          "logradouro": "SBN",
+          "numero": 10,
+          "complemento": "Bloco A",
+          "bairro": "Plano Piloto",
+          "referencia": "",
+          "cidade": "Brasília",
+          "uf": "DF",
+          "cep": 70002900,
+          "ddd": 61,
+          "telefone": 34261111,
+          "email": "fulano@mail.com",
+          "ciencia_conteudo_proibido": "N"
+        },
+        "coletas_solicitadas": {
+          "tipo": "A",
+          "id_cliente": 1133566,
+          "valor_declarado": 1500,
+          "descricao": "",
+          "cklist": "",
+          "documento": "",
+          "remetente": {
+            "nome": "Ciclano",
+            "logradouro": "Rua 35",
+            "numero": 10,
+            "complemento": "",
+            "bairro": "Águas Claras(Sul)",
+            "referencia": "",
+            "cidade": "Brasília",
+            "uf": "DF",
+            "cep": 71931180,
+            "ddd": 61,
+            "telefone": 34262222,
+            "email": "ciclano@mail.com",
+            "identificacao": "",
+            "ddd_celular": 61,
+            "celular": 92236666,
+            "sms": "S",
+            "restricao_anac": "S"
+          },
+          "produto": {
+            "codigo": 116600063,
+            "tipo": 0,
+            "qtd": 1
+          },
+          "numero": "",
+          "ag": "",
+          "cartao": "",
+          "servico_adicional": "",
+          "ar": "",
+          "obj_col": {
+            "item": 1,
+            "desc": "",
+            "entrega": "",
+            "num": "",
+            "id": 553366
+          }
+        }
+      }
+    }
+]

@@ -1,0 +1,64 @@
+- solicitarPostagemReversa()
+
+- cancelarPedido()
+
+- acompanharPedido()
+
+- acompanharPedidoPorData()
+
+- revalidarPrazoAutorizacaoPostagem() - revisar
+
+- solicitarRange()
+
+- calcularDigitoVerificador()
+
+- solicitarPostagemSimultanea()
+
+
+USERS   AUTHCORREIOS
+ID      ID ------- USER_ID ------ NOME
+1 ------ 1 -------- 1 ----------- sigep
+2 ------ 2 -------- 1 ----------- log_Reversa
+3 ------ 3 -------- 1 ----------- sro
+
+- TELA ONDE O CLIENTE ENSIRA OS OS DADOS PARA FAZER OS PEDIDIOS DE LOGISTICA REVERSA
+
+- O CLIENTE INSERE O CPF -> RETORNADO OS PEDIDOS DO CLIENTE -> SALVAR OS PEDIDOS
+
+- TELA NO PAINAL PARA LISTAR OS PEDIDOS DE LGR PARA ADM APROVAR OU RECUSAR
+
+new Date(new Date().setDate(new Date().getDate() - 5)).toISOString().split('T')
+buscar por faixa de 2 semana do pedido
+
+https://api.nuvemshop.com.br/v1/1007019/orders
+?q=19827068806
+&created_at_max=2021-04-31
+&created_at_min=2021-04-10
+&shipping_status=fulfilled
+
+
+"produto": {
+  "codigo": "116600403",
+  "qtd": "1",
+  "tipo": "0"
+},
+
+"remetente": {
+  "bairro": "Rebouças",
+  "cep": "80002900",
+  "cidade": "Curitiba",
+  "complemento": "Bloco II",
+  "ddd": "41",
+  "email": "cli@email.com.br",
+  "logradouro": "Rua João Negrão",
+  "nome": "Ciclano",
+  "numero": "1251",
+  "referencia": "referencia",
+  "telefone": "4132321234",
+  "uf": "PR",
+  "celular": "92236666",
+  "ddd_celular": "41",
+  "sms": "N",
+  "identificacao": "30.297.704/0001-39",
+  "restricao_anac": "S"
+}

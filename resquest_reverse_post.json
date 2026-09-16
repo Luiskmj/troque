@@ -1,0 +1,64 @@
+{
+  "codAdministrativo": 17000190, // <-- required
+  "codigo_servico": 4677, // <-- required
+  "cartao": 67599079, // <-- required
+  "destinatario": {
+    "nome": "Fulano",// <-- required
+    "logradouro": "SBN" , // <-- required
+    "numero": 10, // <-- required
+    "complemento": "",
+    "bairro": "",
+    "referencia": "",
+    "cidade": "Brasília", // <-- required
+    "uf": "DF", // <-- required
+    "cep": 70002900, // <-- required
+    "ddd": "",
+    "telefone": "",
+    "email": "",
+    "ciencia_conteudo_proibido": "N" // <-- required
+  },
+  "coletas_solicitadas": {
+    "tipo": "A", // <-- required 3 TIPOS CA / C / A
+    "id_cliente": "",
+    "valor_declarado": "",
+    "descricao": "",
+    "cklist": "",
+    "documento": "",
+    "numero": "",
+    "ag": "",
+    "cartao": "",
+    "servico_adicional": "",
+    "ar": "",
+    "remetente": {
+      "nome": "Ciclano", // <-- required
+      "logradouro": "Rua 35", // <-- required
+      "numero": 10, // <-- required
+      "complemento": "",
+      "bairro": "",
+      "referencia": "",
+      "cidade": "Brasília", // <-- required
+      "uf": "DF", // <-- required
+      "cep": 71931180, // <-- required
+      "ddd": 61, // <-- required
+      "telefone": 34262222, // <-- required
+      "email": "ciclano@mail.com", // <-- required
+      "identificacao": "",
+      "ddd_celular": "",
+      "celular": "",
+      "sms": "",
+      "restricao_anac": "S" // <-- required
+    },
+    "produto": { // <--- CONTEM OS BLOCOS DE TAGS
+      "codigo": "",
+      "tipo": "",
+      "qtd": ""
+    },
+    "obj_col": { // <--- CONTEM OS BLOCOS DE TAGS
+      "item": 1, // <-- required
+      "desc": "",
+      "entrega": "",
+      "num": "",
+      "id": ""
+    }
+  }
+}

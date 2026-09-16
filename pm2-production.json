@@ -1,0 +1,49 @@
+{
+    "apps": [
+        {
+            "name"        : "api",
+            "script"      : "server.js",
+            "instances"   : 2,
+            "exec_mode"   : "cluster",
+            "watch"       : false,
+            "merge_logs"  : true,
+            "cwd"         : "/usr/src/app/",
+            "env_production" : {
+                "NODE_ENV": process.env.NODE_ENV,
+                "PORT": process.env.PORT,
+
+                "AUTH_SECRET": process.env.AUTH_SECRET,
+                "PORT": process.env.PORT,
+
+                "ADMINS": process.env.ADMINS,
+                "APP_ID": process.env.APP_ID,
+                "APP_SECRET": process.env.APP_SECRET,
+                "SMPT_USER": process.env.SMPT_USER,
+                "SMPT_PASSWORD": process.env.SMPT_PASSWORD,
+
+                "BASE_URL": process.env.BASE_URL,
+                "API_URL": process.env.API_URL,
+
+                "API_SECRET": process.env.API_SECRET,
+                "FRONTEND_URL": process.env.FRONTEND_URL,
+
+                "DATABASE_HOST": process.env.DATABASE_HOST,
+                "DATABASE_PORT": process.env.DATABASE_PORT,
+                "DATABASE_USER": process.env.DATABASE_USER,
+                "DATABASE_PASS": process.env.DATABASE_PASS,
+                "DATABASE_NAME": process.env.DATABASE_NAME,
+
+                "TYPEORM_ENTITIES": process.env.TYPEORM_ENTITIES,
+                "TYPEORM_MIGRATION": process.env.TYPEORM_MIGRATION,
+                "TYPEORM_MIGRATION_DIR": process.env.TYPEORM_MIGRATION_DIR,
+                "TYPEORM_SUBSCRIBERS": process.env.TYPEORM_SUBSCRIBERS,
+                "TYPEORM_SEED": process.env.TYPEORM_SEED,
+                "TYPEORM_FACTORY": process.env.TYPEORM_FACTORY,
+
+                "VINDI_URL": process.env.VINDI_URL,
+                "VINDI_USERNAME": process.env.VINDI_USERNAME,
+                "VINDI_PASSWORD": process.env.VINDI_PASSWORD
+            }
+        }
+    ]
+}

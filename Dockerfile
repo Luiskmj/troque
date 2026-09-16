@@ -1,15 +1,24 @@
-FROM node:14.21.0-alpine
+# Imagem base
+FROM node:18.17.0
 
-RUN apk add --no-cache python3 g++ make
+# Criação do diretório de trabalho
+WORKDIR /usr/src/app
 
-WORKDIR /usr/app/panel
+RUN npm install -g npm
+RUN npm install -g pm2
+RUN pm2 install pm2-logrotate
 
-COPY package.json ./
+# Instalação das dependências
+COPY package*.json ./
+RUN npm install --only=production
 
-RUN yarn install
+# Copia o código fonte
+COPY ormconfig.js dist/ ./
+COPY src/modules modules
+COPY src/shared shared
 
-COPY . .
+# Define a porta que a aplicação vai escutar
+EXPOSE 3357
 
-EXPOSE 3000
-
-CMD ["yarn", "start"]
+# Comando para executar a aplicação
+CMD ["node", "server.js"]

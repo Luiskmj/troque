@@ -1,0 +1,72 @@
+{
+  "Envelope": {
+    "Header": "",
+    "Body": {
+      "solicitarPostagemReversa": {
+        "codAdministrativo": 16218310,
+        "codigo_servico": 3301,
+        "cartao": 9912400529,
+        "destinatario": {
+          "nome": "Botas Texanas e Botas Country - Masculinas e Femininas",
+          "logradouro": "Rua José Josué da Silva",
+          "numero": 1579,
+          "complemento": "",
+          "bairro": "Residencial Jardim Vera Cruz",
+          "referencia": "",
+          "cidade": "Franca",
+          "uf": "SP",
+          "cep": 14407488,
+          "ddd": "",
+          "telefone": "",
+          "email": "",
+          "ciencia_conteudo_proibido": "N"
+        },
+        "coletas_solicitadas": {
+          "tipo": "A",
+          "id_cliente": "282-d47f04c3d1507fb92092",
+          "valor_declarado": "",
+          "descricao": "",
+          "cklist": "",
+          "documento": "",
+          "remetente": {
+            "nome": "Eva Commerce",
+            "logradouro": "Rua 1",
+            "numero": 1,
+            "complemento": "",
+            "bairro": "Centro",
+            "referencia": "",
+            "cidade": "Santa Gertrudes",
+            "uf": "SP",
+            "cep": 13510023,
+            "ddd": 19,
+            "telefone": 999814681,
+            "email": "teste@evacommerce.com.br",
+            "ciencia_conteudo_proibido": "N",
+            "identificacao": 19827068806,
+            "ddd_celular": "",
+            "celular": "",
+            "sms": "N",
+            "restricao_anac": "S"
+          },
+          "produto": {
+            "codigo": "",
+            "tipo": "",
+            "qtd": ""
+          },
+          "numero": "",
+          "ag": "",
+          "cartao": "",
+          "servico_adicional": "",
+          "ar": "",
+          "obj_col": {
+            "item": 1,
+            "desc": "",
+            "entrega": "",
+            "num": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

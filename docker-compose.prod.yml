@@ -1,0 +1,20 @@
+version: "3"
+services:
+
+  api.prod.docker:
+    container_name: "troque_api"
+    restart: "always"
+    image: troque_api
+    user: root
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/app/
+    expose:
+      - 3357
+    ports:
+      - 3357:3357
+    env_file:
+      - /etc/environment
+    command: "/./app/docker/start.sh"

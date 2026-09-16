@@ -1,0 +1,574 @@
+https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl => SIGEP WEB
+
+https://apphom.correios.com.br/ScolWeb/WebServiceScol?wsdl => Logistica Reversa
+
+http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?WSDL => Precificador
+
+http://webservice.correios.com.br/service/rastro/Rastro.wsdl => SRO
+
+https://codebeautify.org/xmltojson => XML to JSON Converter
+
+https://github.com/arthursoas/correios_gem => README
+
+- codAdministrativo é mesmo pro SIGEP e Logistica Reversa
+
+- cartãoPostagem poder ser ou nao o mesmo pro SIGEP e Logistica Reversa
+
+- id do contrato é mesmo pro SIGEP e Logistica Reversa
+
+- usuario e senha do SIGEP e Logistica Reversa são diferentes
+
+- SRO tem que registrar no site dos correios
+
+- Precificador não precisa de autenticação
+
+- cada CNPJ tem um contrato - id do contrato
+                            - id do cartao
+                            - codAdministrativo
+                            - loginSigepLogisticaReversa
+
+
+
+============================AUTENTICAÇÃO================================
+
+------------------------------
+-(TESTE-SIGEP)codAdministrativo: ''
+-(TESTE-SIGEP)contrato: ''
+
+-(TESTE-REVERSA)codAdministrativo: '17000190'
+-(TESTE-REVERSA)contrato: '9992157880'
+
+cartao: '0067599079'
+cnpj: '34028316000103'
+-------------------------------
+
+usuario: 'sigep'
+senha: 'n5f9t8'
+
+usuario: 'empresacws',
+senha: '123456',
+
+usuario: 'ECT'
+senha: 'SRO'
+
+
+SIGEP
+  "usuario": "sigep",
+  "senha": "n5f9t8"
+
+LOGISTICA REVERSA
+  "username": "empresacws",
+  "password": "123456"
+
+
+============================PRODUÇÃO============================
+
+http://www2.correios.com.br/encomendas/servicosonline/default.cfm?e=1004
+
+Código Administrativo: 16218310
+E-mail: luiskmj@gmail.com
+Senha: luis7012
+
+Codigo Administrativo: 16218310
+Senha: zdmajd
+Contrato: 9912400529
+Usuario: 21861134000177
+Cartao Postagem: 0072437740
+Senha: luis7012
+
+
+====================================================================
+
+======================buscaCliente======================
+{
+  idContrato: '9992157880',
+  idCartaoPostagem: '0067599079',
+  usuario: 'sigep',
+  senha: 'n5f9t8',
+},
+
+{
+  return: {
+    cnpj: '34028316000103',
+    contratos: [ [Object] ],
+    dataAtualizacao: 2020-08-28T13:59:03.000Z,
+    datajAtualizacao: 120241,
+    descricaoStatusCliente: 'Ativo',
+    horajAtualizacao: '105903',
+    id: '279311',
+    inscricaoEstadual: '0733382100116',
+    nome: 'CORREIOS SEDE',
+    statusCodigo: '1'
+  }
+}
+
+codigoAdministrativo: res.return.contratos[0].cartoesPostagem[0].codigoAdministrativo,
+
+==========================================================
+
+======================consultaCEP========================
+
+{
+  cep: 14400330
+}
+
+{
+  return: {  }
+}
+
+==========================================================
+
+======================verificaDisponibilidadeServico======================
+
+{
+  codAdministrativo: '17000190',
+  numeroServico: '04162',
+  cepOrigem: '05311900',
+  cepDestino: '14400330',
+  usuario: 'sigep',
+  senha: 'n5f9t8',
+},
+
+{ return: '0#' }
+
+==========================================================
+
+======================getStatusCartaoPostagem======================
+
+{
+  numeroCartaoPostagem: '0067599079',
+  usuario: 'sigep'
+  senha: 'n5f9t8'
+},
+
+{ return: 'Normal' }
+
+==========================================================
+
+======================solicitarRange======================
+
+------------TIPO------------
+AP = Autorização Postagem
+LR = Logistica Reversa
+LE - Logistica Reversa PAC
+LS - Logistiva Reversa Sedex
+LV - Logistiva Reversa e-Sedex
+----------------------------------
+
+Só informar servico quando for LR
+
+{
+  usuario: '60618043',
+  senha: '8o8otn',
+  codAdministrativo: '08082650',
+  contrato: '9912208555',
+  tipo: 'AP',
+  quantidade: 1,
+},
+
+{
+  return: {
+    data: '17/05/2021',
+    hora: '12:22',
+    cod_erro: '0',
+    faixa_inicial: 108372,
+    faixa_final: 108372
+  }
+}
+
+==========================================================
+
+======================calcularDigitoVerificador======================
+
+{
+  usuario: '60618043',
+  senha: '8o8otn',
+  codAdministrativo: '08082650',
+  numero: 15733879,
+},
+
+{
+  return: {
+    data: '17/05/2021',
+    hora: '14:01',
+    cod_erro: '0',
+    digito: 6,
+    numero: 157338796
+  }
+}
+
+
+==========================================================
+
+======================solicitarPostagemReversa======================
+
+------------TIPO------------
+C - Coleta
+A - Autorização Postagem
+CA – Caso não exista coleta, a solicitação poderá ser uma Autorização de Postagem
+----------------------------
+
+--------------CKLIST---------------
+2: Solicitação de Checklist Celular
+4: Solicitação de Checklist Eletrônico
+-------------------------------------
+
+-------------------NUMERO--------------------
+Número da Autorização de Postagem.
+Usado quando o cliente já possui uma faixa
+numérica reservada desse tipo de solicitação.
+----------------------------------------------
+
+{
+  usuario: '60618043',
+  senha: '8o8otn',
+  codAdministrativo: '08082650',
+  contrato: '9912208555',
+  codigo_servico: '04928',
+  cartao: '0057018901',
+  destinatario: {
+    nome: 'Fulano',
+    logradouro: 'Qd 301',
+    numero: '10',
+    complemento: 'Residencial Central',
+    bairro: 'Centro',
+    referencia: 'ao lado',
+    cidade: 'Brasília',
+    uf: 'DF',
+    cep: '70002900',
+    ddd: '61',
+    telefone: '6133331234',
+    email: 'cli@email.com.br',
+  },
+  coletas_solicitadas {
+    cklist: '2'
+    descricao: '',
+    id_cliente: '102030',
+    produto: {
+      codigo: '',
+      qtd: '',
+      tipo: '',
+    },
+    remetente: {
+      bairro: 'Centro',
+      cep: '80002900',
+      cidade: 'Curitiba',
+      complemento: 'Bloco II',
+      ddd: '41',
+      email: 'cli@email.com.br',
+      logradouro: 'Rua João Negrão',
+      nome: 'Ciclano',
+      numero: '1251'
+      referencia: '',
+      telefone: '4132321234',
+      uf: 'PR',
+      celular: '',
+      ddd_celular: '',
+      sms: 'N',
+      identificacao: '',
+    },
+    tipo: '',
+    valor_declarado: '1000.00',
+    ag: '5',
+    ar: '1',
+    cartao: '',
+    numero: '',
+    obj_col: {
+      desc: '',
+      entrega: '',
+      id: '12344321',
+      item: '1',
+      num: '',
+    },
+    servico_adicional: '',
+  },
+},
+====================================================================
+
+
+{
+  usuario: '60618043',
+  senha: '8o8otn',
+  codAdministrativo: '08082650',
+  contrato: 9912208555,
+  codigo_servico: 41076,
+  cartao: '0057018901',
+  destinatario: {
+    nome: 'Fulano',
+    logradouro: 'Qd 301',
+    numero: '10',
+    complemento: 'Residencial Central',
+    bairro: 'Centro',
+    referencia: 'Ao Lado',
+    cidade: 'Brasília',
+    uf: 'DF',
+    cep: '70002900',
+    ddd: '61',
+    telefone: '6133331234',
+    email: 'cli@email.com.br',
+  },
+  coletas_solicitadas: {
+    numero: '',
+    ag: '5',
+    cartao: '0067599079',
+    servico_adicional: '10',
+    ar: '1',
+    tipo: 'A',
+    cklist: '2',
+    valor_declarado: '1000',
+    descricao: 'long',
+    id_cliente: '102030',
+    obj_col: {
+      item: '1',
+      desc: 'string',
+      entrega: 'string',
+      num: 'string',
+      id: '12344321',
+    },
+    produto: {
+      codigo: '116600403',
+      qtd: 1,
+      tipo: '0',
+    },
+    remetente: {
+      bairro: 'Centro',
+      cep: 80002900,
+      cidade: 'Curitiba',
+      complemento: 'Bloco II',
+      ddd: 41,
+      email: 'cli@email.com.br',
+      logradouro: 'Rua João Negrão',
+      nome: 'Ciclano',
+      numero: 1251,
+      referencia: 'referencia',
+      telefone: 4132321234,
+      uf: 'PR',
+      celular: 'celular',
+      ddd_celular: 'dd',
+      sms: 'N',
+      identificacao: 'ident',
+    },
+  },
+},
+
+
+{
+  usuario: '60618043',
+  senha: '8o8otn',
+  codAdministrativo: '08082650',
+  contrato: '9912208555',
+  codigo_servico: '04936',
+  cartao: '0057018901',
+  destinatario: {
+    nome: 'Fulano',
+    logradouro: 'Qd 301',
+    numero: '10',
+    complemento: 'Residencial Central',
+    bairro: 'Centro',
+    referencia: 'Ao Lado',
+    cidade: 'Brasília',
+    uf: 'DF',
+    cep: '70002900',
+    ddd: '61',
+    telefone: '6133331234',
+    email: 'cli@email.com.br',
+  },
+  coletas_solicitadas: {
+    numero: '',
+    ag: '5',
+    cartao: '0067599079',
+    servico_adicional: '10',
+    ar: '1',
+    tipo: 'A',
+    cklist: '2',
+    valor_declarado: '1000',
+    descricao: 'long',
+    id_cliente: '102030',
+    obj_col: {
+      item: '1',
+      desc: 'string',
+      entrega: 'string',
+      num: 'string',
+      id: '12344321',
+    },
+    produto: {
+      codigo: '116600403',
+      qtd: 1,
+      tipo: '0',
+    },
+    remetente: {
+      bairro: 'Centro',
+      cep: '80002900',
+      cidade: 'Curitiba',
+      complemento: 'Bloco II',
+      ddd: '41',
+      email: 'cli@email.com.br',
+      logradouro: 'Rua João Negrão',
+      nome: 'Ciclano',
+      numero: '1251',
+      referencia: 'referencia',
+      telefone: '4132321234',
+      uf: 'PR',
+      celular: 'celular',
+      ddd_celular: 'dd',
+      sms: 'N',
+      identificacao: 'ident',
+    },
+  },
+},
+
+
+{
+	"usuario": "60618043",
+  "senha": "8o8otn",
+  "codAdministrativo": "08082650",
+  "contrato": "9912208555",
+  "codigo_servico": "04936",
+  "cartao": "0057018901",
+  "destinatario": {
+    "nome": "Fulano",
+    "logradouro": "Qd 301",
+    "numero": "10",
+    "complemento": "Residencial Central",
+    "bairro": "Centro",
+    "referencia": "Ao Lado",
+    "cidade": "Brasília",
+    "uf": "DF",
+    "cep": "70002900",
+    "ddd": "61",
+    "telefone": "6133331234",
+    "email": "cli@email.com.br"
+  },
+  "coletas_solicitadas": {
+    "numero":  "",
+    "ag": "5",
+    "cartao": "0067599079",
+    "servico_adicional": "10",
+    "ar": "1",
+    "tipo": "A",
+    "cklist": "2",
+    "valor_declarado": "1000",
+    "descricao": "long",
+    "id_cliente": "102030",
+    "obj_col": {
+      "item": "1",
+      "desc": "string",
+      "entrega": "string",
+      "num": "string",
+      "id": "12344321"
+    },
+    "produto": {
+      "codigo": "116600403",
+      "qtd": 1,
+      "tipo": "0"
+    },
+    "remetente": {
+      "bairro": "Centro",
+      "cep": "80002900",
+      "cidade": "Curitiba",
+      "complemento": "Bloco II",
+      "ddd": "41",
+      "email": "cli@email.com.br",
+      "logradouro": "Rua João Negrão",
+      "nome": "Ciclano",
+      "numero": "1251",
+      "referencia": "referencia",
+      "telefone": "4132321234",
+      "uf": "PR",
+      "celular": "celular",
+      "ddd_celular": "dd",
+      "sms": "N",
+      "identificacao": "ident"
+    }
+  }
+}
+
+
+======================cancelarPedido======================
+
+{
+  "usuario": 60618043,
+  "senha": "8o8otn",
+  "codAdministrativo": 8082650,
+  "numeroPedido": 170840044,
+  "tipo": "A"
+}
+
+
+
+====================================================================
+
+
+
+
+
+
+FORMATADO Centro
+{
+	"id": 23,
+	"logistic": {
+  	"codAdministrativo": "17000190",
+    "codigo_servico": "04170",
+    "cartao": "0067599079",
+    "destinatario": {
+    	"nome": "Fulano",
+     	"logradouro": "SBN",
+      "numero": "10",
+      "complemento": "",
+      "bairro": "",
+      "referencia": "",
+     	"cidade": "Brasília",
+      "uf": "DF",
+      "cep": "70002900",
+      "ddd": "",
+      "telefone": "",
+     	"email": "",
+      "ciencia_conteudo_proibido": "N"
+    },
+   	"coletas_solicitadas": {
+   		"tipo": "A",
+     	"id_cliente": "",
+     	"valor_declarado": "",
+      "descricao": "",
+      "cklist": "",
+      "documento": "",
+      "remetente": {
+      	"nome": "Ciclano",
+        "logradouro": "Rua 35",
+        "numero": "10",
+        "complemento": "",
+        "bairro": "",
+        "referencia": "",
+        "cidade": "Brasília",
+        "uf": "DF",
+        "cep": "71931180",
+        "ddd": "61",
+        "telefone": "34262222",
+        "email": "ciclano@mail.com",
+        "ciencia_conteudo_proibido": "N"
+        "identificacao": "",
+        "ddd_celular": "",
+        "celular": "",
+        "sms": "",
+        "restricao_anac": "S"
+      },
+      "produto": {
+      	"codigo": "",
+        "tipo": "",
+        "qtd": ""
+      },
+      "numero": "",
+     	"ag": "",
+      "cartao": "",
+      "servico_adicional": "",
+      "ar": "",
+      "obj_col": {
+      	"item": "1",
+        "desc": "",
+        "entrega": "",
+        "num": "",
+        "id": ""
+      }
+    }
+  }
+}

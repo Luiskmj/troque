@@ -1,0 +1,133 @@
+[
+  [
+    {
+      "id": 1,
+      "observation": "O motivo da troca",
+      "admin_id": 1,
+      "customer_id": 1,
+      "status_id": 3,
+      "address_id": 2,
+      "created_at": "2021-06-23T16:19:21.000Z",
+      "updated_at": "2021-06-23T16:19:21.000Z",
+      "administrator": {
+        "id": 1,
+        "name": "Botas Texanas e Botas Country - Masculinas e Femininas",
+        "email": "contato@7mboots.com.br",
+        "password": "htJEXMoZgu",
+        "email_checked": false,
+        "nuvemshop_store_id": "1007019",
+        "nuvemshop_store_token": "c0d9fc5aa50b6631099eb37eb347fea70af6c776",
+        "forgot_token": null,
+        "expire_token": null,
+        "address_id": 1,
+        "auth_correios_id": 1,
+        "created_at": "2021-06-23T16:19:21.000Z",
+        "updated_at": "2021-06-23T16:19:21.000Z"
+      },
+      "customer": {
+        "id": 1,
+        "name": "Cleon Fernando",
+        "email": "Cfxavier@terra.com.br",
+        "identification": "75382008604",
+        "phone": "+5567992595007",
+        "created_at": "2021-06-23T16:19:21.000Z",
+        "updated_at": "2021-06-23T16:19:21.000Z"
+      },
+      "address": {
+        "id": 2,
+        "street": "Rua Antônio Penelli",
+        "number": "1236",
+        "neighborhood": "Jardim das Oliveiras",
+        "city": "Três Lagoas",
+        "state": "MS",
+        "complement": "Apto 304",
+        "zipcode": "79630290",
+        "created_at": "2021-06-23T16:19:20.000Z",
+        "updated_at": "2021-06-23T16:19:20.000Z"
+      },
+      "status": {
+        "id": 3,
+        "name": "rejected",
+        "created_at": "2021-06-23T16:19:21.000Z",
+        "updated_at": "2021-06-23T16:19:21.000Z"
+      },
+      "orders": [
+        {
+          "id": 1,
+          "nuvemshop_order_id": 434326922,
+          "nuvemshop_store_id": 1007019,
+          "logistic_request_id": 1,
+          "created_at": "2021-06-23T16:19:21.000Z",
+          "updated_at": "2021-06-23T16:19:21.000Z",
+          "products": [
+            {
+              "id": 1,
+              "name": "Bota Texana Misteriosa Avestruz (42, Marrom)",
+              "price": "197.78",
+              "quantity": "1",
+              "url_image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/007/019/products/design-sem-nome-41-f73357943a97541eac15698504912101-1024-1024.png",
+              "nuvemshop_product_id": 40257022,
+              "created_at": "2021-06-23T16:19:21.000Z",
+              "updated_at": "2021-06-23T16:19:21.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  1,
+  {
+    "codigo_servico": "03182",
+     "codAdministrativo": 17000190,
+     "cartao": "0067599079",
+     "destinatario": {
+       "nome": "demo-agencia-eva-commerce",
+       "logradouro": "Rua Leandro Tavares da Silva",
+       "numero": 123,
+       "complemento": "Casa",
+       "bairro": "Jardim Luiza",
+       "cidade": "Franca",
+       "uf": "SP",
+       "cep": "14407-526",
+       "referencia": "",
+       "ddd": "",
+       "telefone": "",
+       "email": "",
+       "ciencia_conteudo_proibido": "N"
+     },
+     "coletas_solicitadas": {
+        "tipo": "A",
+        "numero": "",
+        "ag": "",
+        "cartao": "",
+        "servico_adicional": "" ,
+        "ar": "",
+        "cklist": "",
+        "documento": "",
+        "valor_declarado": "",
+        "descricao": "",
+        "id_cliente": "",
+        "obj_col": { "item": "3", "desc": "", "entrega": "", "num": "", "id": "" },
+        "produto": { "codigo": "", "qtd": "", "tipo": "" },
+        "remetente": {
+          "bairro": "Jardim Luiza",
+          "cep": "14407526",
+          "cidade": "Franca",
+          "complemento": "Casa",
+          "logradouro": "Rua Leandro Tavares da Silva",
+          "numero": "1234",
+          "uf": "SP",
+          "referencia": "",
+          "ddd": "16",
+          "telefone": "997859710",
+          "ddd_celular": "",
+          "celular": "",
+          "nome": "Malu Marlene Vieira",
+          "email": "testemalueva@gmail.com",
+          "identificacao": "35085721888",
+          "sms": "N",
+          "restricao_anac": "S"
+        }
+      }
+  }
+]

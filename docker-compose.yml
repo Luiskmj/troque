@@ -1,0 +1,38 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    image: troca
+    container_name: troca
+    restart: always
+    ports:
+      - 3357:3357
+    volumes:
+      - .:/usr/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - troque-rapido
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: mysql
+    restart: always
+    tty: true
+    ports:
+      - 3306:3306
+    volumes:
+      - ./database:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=troque_rapido
+      - MYSQL_ROOT_PASSWORD=docker
+    networks:
+      - troque-rapido
+
+
+networks:
+  troque-rapido:
+    driver: bridge

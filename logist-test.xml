@@ -1,0 +1,69 @@
+<soapenv:Envelope>
+  <soapenv:Header/>
+  <soapenv:Body>
+    <ser:solicitarPostagemReversa>
+      <codAdministrativo>17000190</codAdministrativo>
+      <codigo_servico>04677</codigo_servico>
+      <cartao>0067599079</cartao>
+      <destinatario>
+        <nome>Fulano</nome>
+        <logradouro>SBN</logradouro>
+        <numero>10</numero>
+        <complemento>Bloco A</complemento>
+        <bairro>Plano Piloto</bairro>
+        <referencia></referencia>
+        <cidade>Brasília</cidade>
+        <uf>DF</uf>
+        <cep>70002900</cep>
+        <ddd>61</ddd>
+        <telefone>34261111</telefone>
+        <email>fulano@mail.com</email>
+        <ciencia_conteudo_proibido>N</ciencia_conteudo_proibido>
+      </destinatario>
+      <coletas_solicitadas>
+        <tipo>A</tipo>
+        <id_cliente>1133566</id_cliente>
+        <valor_declarado>1500.00</valor_declarado>
+        <descricao></descricao>
+        <cklist></cklist>
+        <documento></documento>
+        <remetente>
+          <nome>Ciclano</nome>
+          <logradouro>Rua 35</logradouro>
+          <numero>10</numero>
+          <complemento></complemento>
+          <bairro>Águas Claras(Sul)</bairro>
+          <referencia></referencia>
+          <cidade>Brasília</cidade>
+          <uf>DF</uf>
+          <cep>71931180</cep>
+          <ddd>61</ddd>
+          <telefone>34262222</telefone>
+          <email>ciclano@mail.com</email>
+          <identificacao></identificacao>
+          <ddd_celular>61</ddd_celular>
+          <celular>92236666</celular>
+          <sms>S</sms>
+          <restricao_anac>S</restricao_anac>
+        </remetente>
+        <produto>
+          <codigo>116600063</codigo>
+          <tipo>0</tipo>
+          <qtd>1</qtd>
+        </produto>
+        <numero></numero>
+        <ag></ag>
+        <cartao></cartao>
+        <servico_adicional></servico_adicional>
+        <ar></ar>
+        <obj_col>
+          <item>1</item>
+          <desc></desc>
+          <entrega></entrega>
+          <num></num>
+          <id>553366</id>
+        </obj_col>
+      </coletas_solicitadas>
+    </ser:solicitarPostagemReversa>
+  </soapenv:Body>
+</soapenv:Envelope>
