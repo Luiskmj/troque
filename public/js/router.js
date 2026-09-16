@@ -4,6 +4,7 @@ import { renderContratar } from './views/contratar.js';
 import { renderLogin } from './views/login.js';
 import { renderPainel } from './views/painel.js';
 import { renderCliente } from './views/cliente.js';
+import { renderLojista } from './views/lojista.js';
 import { Auth } from './auth.js';
 
 const routes = {
@@ -12,6 +13,7 @@ const routes = {
   '/login': renderLogin,
   '/painel': renderPainel,
   '/cliente': renderCliente,
+  '/lojista': renderLojista,
 };
 
 export function getRoute() {
@@ -28,7 +30,7 @@ export function router() {
   const app = document.getElementById('app');
 
   // Guard protected routes
-  if (route === '/painel' && !Auth.isAuthenticated()) {
+  if ((route === '/painel' || route === '/lojista') && !Auth.isAuthenticated()) {
     navigate('/login');
     return;
   }

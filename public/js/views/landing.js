@@ -9,6 +9,7 @@ export function renderLanding(app) {
       </div>
       <div class="navbar-links">
         <a href="#/">Início</a>
+        <a href="#/lojista">Área do Lojista</a>
         <a href="#/cliente">Área do Cliente</a>
         <a href="#/login">Login</a>
         <a href="#/contratar" class="btn btn-primary btn-sm" style="color:#fff;text-decoration:none">Contratar</a>
@@ -20,6 +21,7 @@ export function renderLanding(app) {
       <p>Automatize trocas, devoluções e retornos com integração direta aos Correios e transportadoras. Reduza custos e melhore a experiência do cliente.</p>
       <div class="hero-cta">
         <a href="#/contratar" class="btn btn-primary btn-lg">Contratar Agora</a>
+        <a href="#/lojista" class="btn btn-primary btn-lg">Área do Lojista</a>
         <a href="#/cliente" class="btn btn-outline btn-lg">Área do Cliente</a>
       </div>
     </section>
